@@ -44,15 +44,9 @@ class ProjectFragment : BaseFragment<FragmentProjectBinding>() {
                     mViewModel.loadProjectTree()
                 }
 
-                override fun onDataEmpty() {
-                    super.onDataEmpty()
-                    Log.d(TAG, "onDataEmpty: ")
-                }
-
                 override fun onError(e: Throwable?) {
                     super.onError(e)
                     showToast(e?.message!!)
-                    Log.d(TAG, "onError: ${e?.printStackTrace()}")
                 }
             })
     }

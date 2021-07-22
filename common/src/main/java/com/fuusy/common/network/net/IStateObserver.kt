@@ -46,9 +46,6 @@ abstract class IStateObserver<T>(view: View?) : Observer<BaseResp<T>>, Callback.
                             LoadingCallback::class.java
                         //请求成功
                         DataState.STATE_SUCCESS -> resultCode = SuccessCallback::class.java
-                        //数据为空
-                        DataState.STATE_EMPTY -> resultCode =
-                            EmptyCallback::class.java
                         DataState.STATE_FAILED, DataState.STATE_ERROR -> {
                             val error: Throwable? = t.error
                             onError(error)
@@ -91,10 +88,6 @@ abstract class IStateObserver<T>(view: View?) : Observer<BaseResp<T>>, Callback.
                 onDataChange(t.data)
             }
 
-            DataState.STATE_EMPTY -> {
-                //数据为空
-                onDataEmpty()
-            }
 
             DataState.STATE_FAILED, DataState.STATE_ERROR -> {
                 //请求错误
@@ -118,12 +111,6 @@ abstract class IStateObserver<T>(view: View?) : Observer<BaseResp<T>>, Callback.
 
     }
 
-    /**
-     * 请求成功，但数据为空
-     */
-    open fun onDataEmpty() {
-
-    }
 
     /**
      * 请求错误

@@ -6,7 +6,6 @@ import androidx.multidex.BuildConfig
 import androidx.multidex.MultiDex
 import androidx.paging.ExperimentalPagingApi
 import com.alibaba.android.arouter.launcher.ARouter
-import com.fuusy.common.loadsir.EmptyCallback
 import com.fuusy.common.loadsir.ErrorCallback
 import com.fuusy.common.loadsir.LoadingCallback
 import com.fuusy.common.utils.AppHelper
@@ -52,7 +51,6 @@ class MainApp : Application() {
         LoadSir.beginBuilder()
             .addCallback(ErrorCallback())
             .addCallback(LoadingCallback())
-            .addCallback(EmptyCallback())
             .setDefaultCallback(LoadingCallback::class.java)
             .commit()
     }
