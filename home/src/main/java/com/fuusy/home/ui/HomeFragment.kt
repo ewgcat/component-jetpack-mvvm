@@ -8,7 +8,6 @@ import com.fuusy.home.adapter.viewpager.HomePageAdapter
 import com.fuusy.home.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-private const val TAG = "HomeFragment"
 
 /**
  * @date：2021/5/20
@@ -17,6 +16,7 @@ private const val TAG = "HomeFragment"
  */
 @ExperimentalPagingApi
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+    private  val TAG = "HomeFragment"
 
     private lateinit var homePageAdapter: HomePageAdapter
 

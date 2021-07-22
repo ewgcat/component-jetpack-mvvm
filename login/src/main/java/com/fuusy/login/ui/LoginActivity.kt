@@ -2,7 +2,6 @@ package com.fuusy.login.ui
 
 import android.view.View
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.fuusy.common.base.BaseVmActivity

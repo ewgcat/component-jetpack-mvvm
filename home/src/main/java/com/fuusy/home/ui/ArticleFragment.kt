@@ -19,7 +19,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-private const val TAG = "ArticleFragment"
 
 /**
  * @date：2021/5/20
@@ -28,6 +27,7 @@ private const val TAG = "ArticleFragment"
  */
 @ExperimentalPagingApi
 class ArticleFragment : BaseFragment<FragmentArticleBinding>() {
+    private  val TAG = "ArticleFragment"
 
     private val mViewModel: ArticleViewModel by viewModel()
 

@@ -121,7 +121,7 @@ class ArticleMultiPagingAdapter :
         //绑定文章列表
         fun bindData(data: ArticleData) {
             setText(binding.tvArticleTitle, data.title)
-            setText(binding.btHealthInfoType, data.superChapterName)
+            setText(binding.tvHealthInfoType, data.superChapterName)
             setText(binding.tvHomeInfoTime, data.niceDate)
 
             if (data.author.isEmpty()) {

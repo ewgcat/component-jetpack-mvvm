@@ -12,12 +12,12 @@ import com.fuusy.common.support.Constants
 import com.fuusy.jetpackkt.databinding.ActivityMainBinding
 
 
-private const val TAG = "MainActivity"
+
 
 @Route(path = Constants.PATH_MAIN)
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private var currentNavController: LiveData<NavController>? = null
-
+    private  val TAG = "MainActivity"
     override fun getLayoutId(): Int {
         return R.layout.activity_main
     }

@@ -34,7 +34,7 @@ class DailyQuestionPagingAdapter :BasePagingAdapter<DailyQuestionData> (diffCall
 
     override fun bindData(helper: ItemHelper, data: DailyQuestionData?) {
         helper.setText(R.id.tv_article_title, data?.title)
-        helper.setText(R.id.bt_health_info_type, data?.superChapterName)
+        helper.setText(R.id.tv_health_info_type, data?.superChapterName)
         helper.setText(R.id.tv_article_author, data?.author)
         helper.setText(R.id.tv_home_info_time, data?.niceShareDate)
     }

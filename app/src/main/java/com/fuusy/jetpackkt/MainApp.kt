@@ -15,6 +15,7 @@ import com.fuusy.login.di.moduleLogin
 import com.fuusy.personal.di.modulePersonal
 import com.fuusy.project.di.moduleProject
 import com.kingja.loadsir.core.LoadSir
+import com.tencent.bugly.Bugly
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -29,6 +30,7 @@ class MainApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Bugly.init(getApplicationContext(), "510f4270bd", false);
         initARouter()
         initLoadSir()
         initKoin()
